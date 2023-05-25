@@ -34,7 +34,7 @@ app.route('/_api/package.json')
   });
 
   app.get('/json', function(req, res) {
-    res.json({"message": "Hello json".process.env.MESSAGE_STYLE});
+    res.json({"message": "Hello json".process.env.MESSAGE_STYLE()});
   })
   
 app.route('/')
