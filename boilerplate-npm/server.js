@@ -4,7 +4,7 @@
  * ***************************************************/
 
 'use strict';
-
+require('dotenv').config()
 var fs = require('fs');
 var express = require('express');
 var app = express();
@@ -34,7 +34,7 @@ app.route('/_api/package.json')
   });
 
   app.get('/json', function(req, res) {
-    res.json({"message": "Hello json".toUpperCase()});
+    res.json({"message": "Hello json".process.env.MESSAGE_STYLE});
   })
   
 app.route('/')
